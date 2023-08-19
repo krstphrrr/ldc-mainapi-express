@@ -33,7 +33,6 @@ app.use(
 
 // test db 
 db.connect().then(client =>{
-  console.log(process.env)
   return client
     .query('select NOW();')
     .then((res)=>{

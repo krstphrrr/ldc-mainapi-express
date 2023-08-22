@@ -1,0 +1,2 @@
+export const RESTRICTED = "RESTRICTED"
+export const UNRESTRICTED = "UNRESTRICTED"

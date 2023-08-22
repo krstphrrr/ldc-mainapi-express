@@ -6,11 +6,12 @@
   "scripts": {
     "test": "npm run build && jasmine",
     "start": "npm run build && node dist/index.js",
-    "start:dev": "cross-env NODE_ENV=development nodemon"
+    "start:dev": "nodemon --watch './src' --ext ts,js,tsx,jsx"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
@@ -20,7 +21,9 @@
     "helmet": "^7.0.0",
     "jasmine": "^5.1.0",
     "morgan": "^1.10.0",
-    "pg": "^8.11.2"
+    "pg": "^8.11.2",
+    "ts-node": "^10.9.1",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
@@ -32,5 +35,8 @@
     "knex": "^2.5.1",
     "nodemon": "^3.0.1",
     "typescript": "^5.1.6"
+  },
+  "nodemonConfig": {
+    "delay": "1500ms"
   }
 }

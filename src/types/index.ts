@@ -1,0 +1,1 @@
+export type * as Express from './express.type';

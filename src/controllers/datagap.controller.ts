@@ -1,14 +1,15 @@
 import {NextFunction, Request, Response} from 'express';
 import DataGapModel from '../models/dataGap.model';
+import {Express} from '../types'
 
 const dataGapModel = new DataGapModel()
 
-export const getMany = async(
+export const getMany: Express.MiddleWare = async(
   _: Request, 
   res: Response, 
   next: NextFunction
   ) =>{
-      // console.log(_)
+      console.log(_)
       try{
         const datagap = await dataGapModel.getMany(_)
         
@@ -22,4 +23,8 @@ export const getMany = async(
       }
 }
 
+
+export function apiGen(arg0: string, apiGen: any) {
+  throw new Error('Function not implemented.');
+}
 // 
